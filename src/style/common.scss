@@ -1,0 +1,93 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    color: #2e3232;
+}
+
+#main {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+    display: flex;
+    justify-content: flex-end;
+    font-family: "Amatic SC";
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    li {
+        list-style: none;
+        margin-left: 3vw;
+        cursor: pointer;
+        &:hover {
+            color: #EA4E32;
+            text-shadow: 10px 10px 10px rgba(9, 2, 2, 0.5);
+        }
+        &.is_active {
+            color: #EA4E32;
+            text-shadow: 10px 10px 10px rgba(9, 2, 2, 0.5);
+        }
+    }    
+}
+
+main {
+    // 高さをスクリーンに合わせて調整
+    height: 100vh;
+    background-color: #f2f2f2;
+
+    &.main-home {
+        display: flex;
+        justify-content: center;
+        flex-wrap:wrap;
+        align-items: center;  
+        background-image: url('/src/assets/images/top/top_sky_concrete.jpg'); 
+        background-size: cover;
+        background-position: bottom; // 背景画像を下方から合わせる
+        .center-logo {
+            width: 90vh;
+            height: 350px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: self-end;
+            .title {
+                font-size: 25px;
+                font-weight: bold;
+                font-family: 'Amatic SC';
+                text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+                margin-right: -180px;
+            }    
+        }
+    }
+    // Gallery 画面
+    &.main-list {
+        display: flex;
+        align-items: center;
+        font-family: 'Kaisei Decol';
+
+        // スクロールバーの長さを0にする
+        // Chrome or Safari
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+          
+        // hide the thumb
+        ::-webkit-scrollbar-thumb {
+          background-color: transparent;
+        }
+    }
+}
+
+.component-fadeout {
+    transition: opacity 0.5s ease-in-out;
+}

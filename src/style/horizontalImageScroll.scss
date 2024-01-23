@@ -1,0 +1,31 @@
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+}
+
+.image-container {
+  display: inline-block;
+  margin-right: 100px;
+  .wooden-frame {
+    background-color: #5f574b; /* Dark brown color for the wooden frame */
+    border: 5px solid #a78b5e;
+    padding: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    img.image-item {
+      display: block;
+      width: 200px;
+      height: 200px;  
+    }  
+  }
+  .title-plate {
+    margin: 20px auto;
+    max-width: fit-content;
+    padding: 3px 5px;
+    background: linear-gradient(to right, #c1bfbf, #dadada, #F5F5F5);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+  }  
+}
+  
