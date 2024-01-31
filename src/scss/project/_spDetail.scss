@@ -1,0 +1,49 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.sp.p-detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &-main {
+        position: absolute;
+        top: 5vh;
+        right: 5vw;
+        bottom: 5vh;
+        left: 5vw;
+        z-index: 1;
+        overflow: hidden;
+        background-color: $transparent-gray;
+
+        &-preview {
+            position: absolute;
+            width: 80%;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            cursor: pointer;
+            z-index: 1;
+            margin: auto;
+            &__btn {
+                z-index: 6;
+                height: 10%;
+                width: fit-content;
+                text-align: left;
+                padding-left: 5%;
+            }
+        }
+
+        &__marker {
+            position: absolute;
+            bottom: 10%;
+            right: 0;
+            width: 20%;
+            height: 5%;
+            z-index: 2;
+        }
+    }
+}

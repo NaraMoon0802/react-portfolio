@@ -1,0 +1,90 @@
+@use '_variables' as *;
+
+html {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Kaisei Decol Amatic SC';
+    color: $black;
+    cursor: default;
+}
+
+// 見出し
+.heading {
+    font-size: $font-title;
+    font-family: $ff-English;
+    font-weight: 700;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.large_heading {
+    font-size: $font-large;
+    font-family: $ff-English;
+    font-weight: bold;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.is_active {
+    color: $red;
+    text-shadow: 10px 10px 10px rgba(9, 2, 2, 0.5);
+}
+
+.hover:hover {
+    // @include rotate(0.5s, 0.5s 5deg);
+    transform: rotate(5deg);
+    color: $red;
+    text-shadow: 10px 10px 10px rgba(9, 2, 2, 0.5);
+    transition: transform 0.5s color 0.1s;
+}
+
+.visible {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+
+/*
+ * アニメーション
+*/
+
+.fadein {
+    transform: translateY(0);
+    transition: transform 5s;
+}
+.fadeout {
+    transform: translateY(-100%);
+    transition: transform 5s;
+} 
+
+.slideout {
+    transform: translateX(-100%);
+}
+
+.slidein {
+    transform: translateX(0);
+}

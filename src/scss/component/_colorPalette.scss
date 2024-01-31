@@ -1,0 +1,30 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.c-colorPalette {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pc.c-colorPalette {
+    &__palette {
+        @include content(35px, 35px, 3px 3px 3px rgba(0, 0, 0, 0.3));
+        margin: 5px;
+    }
+}
+
+.sp.c-colorPalette {
+    &__palette {
+        @include content(20px, 20px, 3px 3px 3px rgba(0, 0, 0, 0.3));
+        margin: 2px;
+    }
+}
+
+
+.c-fonts {
+    padding: 0 10px;
+    &__style {
+        text-align: center;
+    }
+}

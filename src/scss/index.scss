@@ -1,0 +1,17 @@
+@use "./foundation/base";
+@use "./foundation/mixin";
+@use "./foundation/variables";
+@use "./layout/main.scss";
+@use "./project/pcDetail";
+@use "./project/spDetail";
+@use "./project/imageContainer";
+@use "./project/horizontalImages";
+@use "./component/circleText";
+@use "./component/colorPalette";
+@use "./component/detailArea";
+@use "./component/imagePreview";
+@use "./component/logo";
+@use "./component/btn";
+
+@use "./utility/color";
+@use "./utility/font";

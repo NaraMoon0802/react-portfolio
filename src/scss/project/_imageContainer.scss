@@ -1,0 +1,28 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.p-container {
+    display: inline-block;
+    margin-right: 100px;
+    &-frame {
+        background-color: $dark-brown;
+        border: 5px solid $light-brown;
+        padding: 10px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        @include rotate(0.3s, 0.3s, 2deg);
+        &__image {
+          display: block;
+          width: 200px;
+          height: 200px;  
+        }  
+    }
+    &-title {
+        margin: 20px auto;
+        max-width: fit-content;
+        padding: 3px 5px;
+        background: $silver;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        font-size: $font-small;
+    }  
+}
+  

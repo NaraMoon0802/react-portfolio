@@ -1,0 +1,30 @@
+@use '_variables' as *;
+
+@mixin contentBox($width: 200px, $height: 200px, $color: $white, $isShadow : false, $scrollableY: false, $scrollableX: false) {
+    background-color: $color;
+    width: $width;
+    height: $height;
+    @if $isShadow {
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    }
+    @if $scrollableY {
+        overflow-y: auto;
+    }
+    @if $scrollableX {
+        overflow-x: auto;
+    }
+}
+
+@mixin content($width: 50px, $height: 50px, $shadow: 10px 10px 10px rgba(0, 0, 0, 0.5)) {
+    width: $width;
+    height: $height;
+    box-shadow: $shadow;
+}
+
+@mixin rotate($goingS: 0.3s, $returnS: 0.3s, $degree: 2deg) {
+    transition: transform $returnS;
+    &:hover {
+      transform: rotate($degree);
+      transition: transform $goingS;
+    }
+}

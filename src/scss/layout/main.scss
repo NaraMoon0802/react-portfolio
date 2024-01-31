@@ -1,0 +1,53 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.l-main {
+    // 高さをスクリーンに合わせて調整
+    height: 100vh;
+    background-color: #f2f2f2;
+    &.-home {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;  
+        background-image: url('/src/assets/images/top/top_sky_concrete.jpg'); 
+        background-size: cover;
+        background-position: bottom; // 背景画像を下方から合わせる
+    }
+    // Gallery 画面
+    &.-list {
+        z-index: 3;
+        display: flex;
+        align-items: center;
+
+        // スクロールバーの長さを0にする
+        // Chrome or Safari
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+          
+        // スクロールバーの操作部分を隠す
+        ::-webkit-scrollbar-thumb {
+          background-color: transparent;
+        }
+    }
+}
+
+.l-nav {
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+    display: flex;
+    justify-content: flex-end;
+    li {
+        list-style: none;
+        margin-left: 3vw;
+        cursor: pointer;
+    }    
+}

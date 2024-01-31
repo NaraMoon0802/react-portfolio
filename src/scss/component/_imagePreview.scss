@@ -1,0 +1,25 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.c-imageframe {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto; // 外部で調整可能にするため暫定
+    &__preview {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        overflow-x: auto;
+        padding: 5% 0;
+
+        img {
+            max-width: 95%;
+            max-height: 100%;
+            border: solid 2px $white;
+            box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+            margin: 0 3%;
+        }    
+    }
+}

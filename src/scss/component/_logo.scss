@@ -1,0 +1,13 @@
+.c-logo {
+    width: 90vh;
+    height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: self-end;
+    .__title {
+        font-size: 25px;
+        font-weight: bold;
+        text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        margin-right: -180px;
+    }
+}

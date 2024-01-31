@@ -1,0 +1,34 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.c-detailArea {
+    &-box {
+        width: 90%;
+        margin: 5% auto;
+        border: solid 5px $blue-green;
+
+        &__elements {
+            padding: 5% 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__document {
+            padding: 5% 5%;
+            text-wrap: wrap;
+            &__content {
+                margin: 5% 0;
+                font-family: $ff-Japanese;
+            }
+        }    
+    }
+}
+
+.pc.c-detailArea {
+    @include contentBox(40%, auto, $white, false, true, false);
+}
+
+.sp.c-detailArea {
+    @include contentBox(95%, auto, $white, false, true, false);
+    margin: auto;
+}

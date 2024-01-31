@@ -1,0 +1,10 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.p-horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+}
+  

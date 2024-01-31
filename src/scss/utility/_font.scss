@@ -1,0 +1,24 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+// font-family
+.u-eng {
+    font-family: $ff-English;
+}
+
+.u-jan {
+    font-family: $ff-Japanese;
+}
+
+// font-size
+.u-fs {
+    font-size: $font-small;
+}
+
+.u-fm {
+    font-size: $font-medium;
+}
+
+.u-fl {
+    font-size: $font-large;
+}
