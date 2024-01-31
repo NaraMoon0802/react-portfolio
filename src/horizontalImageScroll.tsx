@@ -1,23 +1,19 @@
 import * as React from 'react';
-import './style/horizontalImageScroll.scss';
+import ImageContainer from './imageContainer';
 
 type HorizontalImageScrollProps = {
     images: {
         imageUrl: string,
+        imageNames: string[],
         title: string
     }[]
 };
 
 const HorizontalImageScroll: React.FC<HorizontalImageScrollProps> = (props) => {
   return (
-    <div className="horizontal-scroll-container">
-      {props.images.map((value: {imageUrl: string, title: string}, index: number) => (
-        <div className="image-container" key={index} onClick={() => {}}>
-            <div className="wooden-frame">
-                <img key={index} src={value.imageUrl} alt={`Image ${index}`} className="image-item" />
-            </div>
-            <div className="title-plate">{value.title}</div>
-        </div>
+    <div className="p-horizontal-scroll">
+      {props.images.map((value: {imageUrl: string, imageNames: string[], title: string}, imgId: number) => (
+        <ImageContainer key={imgId} imageUrl={value.imageUrl} imageNames={value.imageNames} title={value.title}/>
       ))}
     </div>
   );

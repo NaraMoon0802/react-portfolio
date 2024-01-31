@@ -1,34 +1,29 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import './style/common.scss';
 import {RollText} from './rollText';
 import {ImagePortfolioList} from './imagePortfolioList';
+import './scss/index.scss';
 
 const App = () => {
-    const [view, setView] = React.useState('Home');
+    const [isHome, setIsHome] = React.useState(true);
+
     return (
         <>
-        {view === 'Home' &&
-            <main className="main-home component-fadeout">
-                <div className="center-logo">
-                    <div className="title">
-                        Welcome to Portfolio Gallery
-                    </div>
-                    <RollText setView={setView}/>
-                </div>
-            </main>
-        }
-        {view === 'List' &&
-        <>
-            <nav>
-                <li onClick={() => {setView('Home')}}>Home</li>
-                <li onClick={() => {setView('List')}} className="is_active">Gallery</li>
-                <li onClick={() => {setView('Home')}}>Profile</li>
-                <li onClick={() => {setView('Home')}}>Contact</li>
+            <nav className="l-nav">
+                <li className="heading hover" onClick={() => {setIsHome(true)}}>Home</li>
+                <li className="heading hover is_active" onClick={() => {setIsHome(false)}}>Gallery</li>
+                <li className="heading hover" onClick={() => {setIsHome(true)}}>Profile</li>
+                <li className="heading hover" onClick={() => {setIsHome(true)}}>Contact</li>
             </nav>
             <ImagePortfolioList/>
-        </>
-        }
+            <main className={`l-main -home ${isHome ? 'fadein' : 'fadeout'}`}>
+                <div className="c-logo">
+                    <div className="__title large_heading">
+                        Welcome to Portfolio Gallery
+                    </div>
+                    <RollText setView={() => {setIsHome(false)}}/>
+                </div>
+            </main>
         </>
     );
 }

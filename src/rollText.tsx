@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import { css, keyframes } from '@emotion/css';
 
 type RollTextProps = {
-    setView: React.Dispatch<React.SetStateAction<string>>
+    setView: React.Dispatch<React.SetStateAction<boolean>>
 };
 
 export const RollText: React.FC<RollTextProps> = ({setView}) => {
@@ -49,7 +49,7 @@ export const RollText: React.FC<RollTextProps> = ({setView}) => {
     }
     
     return (
-        <div className={styles.circle} onClick={() => {setView('List')}}>
+        <div className={styles.circle} onClick={() => {setView(false)}}>
             <div className={styles.text}>
                 {text.split('').map((char, i) => (
                     <span key={i} className={styles.char(i * 9)}>
