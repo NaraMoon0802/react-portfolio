@@ -29,7 +29,7 @@ const spDetailPortfolio: React.FC<spDetailPortfolioProps> = (props) => {
 
     const imageUrls: string[] = [];
     props.imageNames.map((name) => {
-       imageUrls.push(`./src/assets/images/${name}`);
+       imageUrls.push(`../src/assets/images/${name}`);
     })
 
     return (

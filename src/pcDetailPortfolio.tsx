@@ -16,7 +16,7 @@ const PcDetailPortfolio: React.FC<pcDetailPortfolioProps> = (props) => {
 
     const imageUrls: string[] = [];
     props.imageNames.map((name) => {
-       imageUrls.push(`./src/assets/images/${name}`);
+       imageUrls.push(`../src/assets/images/${name}`);
     })
 
     // 色をAPIで取得できるようにする
