@@ -1,0 +1,29 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.c-scrollnotice {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    font-family: $ff-English;
+    font-size: $font-large;
+    font-weight: bold;
+    color: $white;
+    font-style: italic;
+    text-shadow: 2px 2px 0 $dark-gray;
+    animation: twinkle 0.5s alternate infinite;
+}
