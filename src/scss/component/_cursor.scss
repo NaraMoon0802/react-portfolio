@@ -1,0 +1,8 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+#cursor.c-cursor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+}

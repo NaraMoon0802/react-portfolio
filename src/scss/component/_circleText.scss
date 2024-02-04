@@ -1,2 +1,42 @@
 @use "../foundation/mixin" as *;
 @use "../foundation/variables" as *;
+
+@include twinkle(0, 1);
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+};
+
+.c-circle {
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-circle__text {
+  font-family: $ff-design;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 50s linear infinite;
+}
+
+.c-circle__notice {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: fit-content;
+  height: fit-content;
+  color: $off-white;
+  animation: twinkle 0.5s alternate infinite;
+}
