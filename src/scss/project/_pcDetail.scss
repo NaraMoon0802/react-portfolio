@@ -15,7 +15,7 @@
         bottom: 5vh;
         left: 5vw;
         padding: 20px;
-        z-index: 1;
+        z-index: 5;
         overflow: hidden;
         background-color: $transparent-gray;
         display: flex;
@@ -25,10 +25,8 @@
             width: 60%;
             height: 100%;
             cursor: pointer;
-            z-index: 1;
             margin: auto;
             &__btn {
-                z-index: 6;
                 height: 10%;
                 width: fit-content;
                 text-align: left;

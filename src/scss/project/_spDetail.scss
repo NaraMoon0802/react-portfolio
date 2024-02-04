@@ -14,7 +14,7 @@
         right: 5vw;
         bottom: 5vh;
         left: 5vw;
-        z-index: 1;
+        z-index: 5;
         overflow: hidden;
         background-color: $transparent-gray;
 
@@ -26,10 +26,8 @@
             left: 0;
             bottom: 0;
             cursor: pointer;
-            z-index: 1;
             margin: auto;
             &__btn {
-                z-index: 6;
                 height: 10%;
                 width: fit-content;
                 text-align: left;
@@ -43,7 +41,7 @@
             right: 0;
             width: 20%;
             height: 5%;
-            z-index: 2;
+            z-index: 5;
         }
     }
 }
