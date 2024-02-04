@@ -28,3 +28,14 @@
       transition: transform $goingS;
     }
 }
+
+@mixin twinkle ($from, $to) {
+    @keyframes twinkle {
+        0% {
+            opacity: $from;
+        }
+        100% {
+            opacity: $to;
+        }
+    }    
+}

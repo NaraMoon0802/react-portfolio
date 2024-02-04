@@ -1,14 +1,8 @@
 @use "../foundation/mixin" as *;
 @use "../foundation/variables" as *;
 
-@keyframes twinkle {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+@include twinkle(0, 1);
+
 .c-scrollnotice {
     position: absolute;
     top: 0;
