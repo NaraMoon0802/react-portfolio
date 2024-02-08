@@ -1,0 +1,30 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.c-actionBtn {
+  font-family: $ff-Japanese;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+.c-actionBtn--save {
+  color: $pale-gray;
+  background-color: $red;
+}
+.c-actionBtn--edit {
+  color: $pale-gray;
+  background-color: $blue-green;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.c-actionBtn--small {
+  font-size: $font-small;
+  padding: 3px 5px;
+}
+
+.c-actionBtn--large {
+  font-size: $font-title;
+  padding: 5px 10px;
+}
